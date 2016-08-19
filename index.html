@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta charset="utf-8" /> 
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="core.js"></script>
+  </head>
+
+  <body onload="zerar()">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <div class="container">
+      <div class="row">
+        <h1 class="center-align">Estratégias de alocação</h1>
+
+        <div class="col s3">
+          <a onclick="zerar()" class="waves-effect waves-light btn">ZERAR</a>
+          <a onclick="preencher()" class="waves-effect waves-light btn">RUN</a>
+        </div>
+
+        <div id="processos" class="col s9">
+        </div>
+
+        <script>inicializa()</script>
+
+        <div class="col s12"><br></div>
+
+        <div class="col s3 center-align">
+          <span class="blue-text center-align">First Fit</span><br>
+
+          <table class="striped bordered">
+            <thead>
+              <tr>
+                  <th>Processo</th>
+                  <th>TAM.</th>
+                  <th>FRAG.</th>
+              </tr>
+            </thead>
+            <tbody id="firstFit"></tbody>
+          </table>
+          <span id="firstVazio" class="red-text center-align"></span>
+        </div>
+
+        <div class="col s3 center-align">
+          <span class="blue-text center-align">Best Fit</span><br>
+
+          <table class="striped bordered">
+            <thead>
+              <tr>
+                  <th>Processo</th>
+                  <th>TAM.</th>
+                  <th>FRAG.</th>
+              </tr>
+            </thead>
+            <tbody id="bestFit"></tbody>
+          </table>
+          <span id="bestVazio" class="red-text center-align"></span>
+        </div>
+
+        <div class="col s3 center-align">
+          <span class="blue-text center-align">Next Fit</span><br>
+
+          <table class="striped bordered">
+            <thead>
+              <tr>
+                  <th>Processo</th>
+                  <th>TAM.</th>
+                  <th>FRAG.</th>
+              </tr>
+            </thead>
+            <tbody id="nextFit"></tbody>
+          </table>
+          <span id="nextVazio" class="red-text center-align"></span>
+        </div>
+
+        <div class="col s3 center-align">
+          <span class="blue-text center-align">Worst Fit</span><br>
+
+          <table class="striped bordered">
+            <thead>
+              <tr>
+                  <th>Processo</th>
+                  <th>TAM.</th>
+                  <th>FRAG.</th>
+              </tr>
+            </thead>
+            <tbody id="worstFit"></tbody>
+          </table>
+          <span id="worstVazio" class="red-text center-align"></span>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
